@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri sddm alacritty firefox dolphin NetworkManager fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr
+dnf5 install -y tmux niri alacritty firefox fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr
 
 copr_install_isolated() {
     local copr_name="$1"
@@ -26,20 +26,8 @@ copr_install_isolated() {
 }
 
 copr_install_isolated "ublue-os/packages" \
-    "ublue-bling" \
     "ublue-brew" \
-    "ublue-fastfetch" \
     "ublue-polkit-rules" \
-    "ublue-setup-services" \
     "uupd"
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-useradd avahi
-systemctl enable sddm.service
+systemctl disable avahi-daemon.service
