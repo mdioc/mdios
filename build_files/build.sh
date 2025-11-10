@@ -41,5 +41,5 @@ copr_install_isolated "ublue-os/packages" \
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
+useradd avahi
 systemctl enable sddm.service
