@@ -1,0 +1,3 @@
+[[customizations.locale]]
+languages = ["en_US.UTF-8"]
+keyboard = "us"
