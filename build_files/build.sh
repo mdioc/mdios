@@ -13,5 +13,5 @@ dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui Ne
 
 #### Example for enabling a System Unit File
 systemctl enable NetworkManager.service
-systemctl disable systemd-remount-fs.service
+systemctl mask systemd-remount-fs.service
 
