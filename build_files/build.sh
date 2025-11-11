@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr shim grub2-efi grub2-efi-x64
+dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak
 
 # Use a COPR Example:
 #
@@ -13,4 +13,5 @@ dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui Ne
 
 #### Example for enabling a System Unit File
 systemctl enable NetworkManager.service
+systemctl disable systemd-remount-fs.service
 
