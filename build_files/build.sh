@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri sddm alacritty firefox dolphin NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr
+dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr
 
 # Use a COPR Example:
 #
@@ -12,5 +12,5 @@ dnf5 install -y tmux niri sddm alacritty firefox dolphin NetworkManager NetworkM
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
+systemctl enable NetworkManager.service
 
-systemctl enable sddm.service
