@@ -1,0 +1,11 @@
+[Unit]
+Description=Add user to wheel
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/usermod -aG wheel %i
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

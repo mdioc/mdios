@@ -3,6 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 # FROM ghcr.io/ublue-os/base-main:latest
 FROM quay.io/fedora/fedora-bootc:43
+COPY build_files/modify-user@.service /etc/systemd/system/
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
