@@ -2,7 +2,6 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox dnf5-plugins sddm
+dnf5 install -y tmux niri alacritty firefox NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox podman sddm
 
 systemctl enable sddm.service
-systemctl enable NetworkManager.service
