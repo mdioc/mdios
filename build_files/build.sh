@@ -26,32 +26,13 @@ copr_install_isolated() {
     echo "Installed ${packages[*]} from $copr_name"
 }
 
-# From che/nerd-fonts
 copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 
-# From ublue-os/packages
 copr_install_isolated "ublue-os/packages" \
-    "bluefin-backgrounds" \
-    "bluefin-cli-logos" \
-    "bluefin-faces" \
-    "bluefin-schemas" \
-    "bluefin-fastfetch" \
-    "ublue-bling" \
     "ublue-brew" \
     "ublue-fastfetch" \
     "ublue-motd" \
     "ublue-polkit-rules" \
     "ublue-setup-services" \
     "uupd"
-
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-systemctl enable NetworkManager.service
-systemctl mask systemd-remount-fs.service
 
