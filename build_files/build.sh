@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox dnf5-plugins sddm
+dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox dnf5-plugins sddm plasma-desktop
 
 
 copr_install_isolated() {
@@ -25,8 +25,6 @@ copr_install_isolated() {
 
     echo "Installed ${packages[*]} from $copr_name"
 }
-
-copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 
 copr_install_isolated "ublue-os/packages" \
     "ublue*" \
