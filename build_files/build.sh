@@ -29,11 +29,7 @@ copr_install_isolated() {
 copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 
 copr_install_isolated "ublue-os/packages" \
-    "ublue-brew" \
-    "ublue-fastfetch" \
-    "ublue-just" \
-    "ublue-polkit-rules" \
-    "ublue-setup-services" \
+    "ublue*" \
     "uupd"
 
 systemctl enable sddm.service
