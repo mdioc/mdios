@@ -4,7 +4,7 @@ COPY build_files /
 
 # Base Image
 ## Other possible base images include:
-
+FROM quay.io/fedora/fedora-coreos:stable
 # FROM ghcr.io/ublue-os/base-main:latest
 # FROM quay.io/fedora/fedora-bootc:43
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
