@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox dnf5-plugins
+dnf5 install -y tmux niri alacritty firefox NetworkManager NetworkManager-tui NetworkManager-wifi fuzzel wofi swayidle swaylock swaybg qt6ct brightnessctl pipewire wireplumber emacs-nox neovim entr flatpak distrobox dnf5-plugins sddm
 
 
 copr_install_isolated() {
@@ -31,8 +31,9 @@ copr_install_isolated "che/nerd-fonts" "nerd-fonts"
 copr_install_isolated "ublue-os/packages" \
     "ublue-brew" \
     "ublue-fastfetch" \
-    "ublue-motd" \
+    "ublue-ujust" \
     "ublue-polkit-rules" \
     "ublue-setup-services" \
     "uupd"
 
+systemctl enable sddm.service
